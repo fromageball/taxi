@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+
+header {
+	height: 200px; background: #f7b731;
+}
+
+nav {top: 200px; }
+nav a {margin-right: 20px;}

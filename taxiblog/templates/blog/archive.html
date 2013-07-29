@@ -1,0 +1,21 @@
+    {% extends 'base.html' %}
+    {% load staticfiles %}
+    
+    {% block content %}
+	<article class="part1">
+	<h1>Archives</h1>
+	
+	
+	<ul>
+	<li><a href="{% url 'archiveYear' year='2013' %}">Posts in 2013</a></li>
+	<li><a href="{% url 'archiveMonth' year='2013' month='07' %}">July, 2013</a></li>
+	</ul>
+	
+	
+		
+			
+	</article>
+		
+	
+		
+    {% endblock %}

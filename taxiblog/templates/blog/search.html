@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load googlesearch_inclusion_tags %}
+
+{% block content %}
+    <article>
+    
+    
+    <h1>What am I doing here?</h1>
+   <div id="searchbar"><script>
+  (function() {
+    var cx = '015475940798122581369:wnjsgm3fhsm';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search></div>
+
+<p>You can search for things here...</p>
+    
+    
+    
+    </article>
+{% endblock %}
+
+
+
+
