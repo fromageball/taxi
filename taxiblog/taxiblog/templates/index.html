@@ -1,0 +1,44 @@
+    {% extends 'base.html' %}
+    {% load staticfiles %}
+    {% load comments %}
+    {% load thumbnail %}
+    
+    {% block title %} Who, Me? Taxi? {% endblock %}
+     
+    {% block content %}
+	<article class="part1">
+			{% for post in posts %}
+			
+			
+			<h1 class="entryheader"><a href="{% url 'blog.views.single' post.slug %}">{{ post.title }}</a></h1>
+			<p>{{ post.bodytext }}</p>
+			
+			{% for postimage in post.postkey.all %}
+			{% thumbnail postimage.image "500x500" as im %}
+			 <img src="{{ im.url }}" alt="dlskjf">
+			 {% endthumbnail %}
+			{% endfor %}
+			
+			
+   	 	
+    
+		
+		
+		<footer class="postToSocialMediaLinks">
+			<a class="continue" href="{% url 'blog.views.single' post.slug %}">Continue Reading -></a>
+		<h2 class="footerDate">Posted on {{ post.timestamp }}</h2>
+			
+		
+		</footer>
+		<br />
+		
+
+		
+			{% endfor%}
+		
+			
+		</article>
+		
+	
+		
+    {% endblock %}
