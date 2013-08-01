@@ -66,13 +66,9 @@ img.mediaImages {
 	width: 80%;
 	height: 80%;
 }
-footer {margin: 5px;}
-
-footer.bottom {
-	width: 100%;
-	height: 50px;
-	background: #ccff99;
+footer {margin: 5px;
 }
+
 
 p.tldr {
 	font-size: 1.3em;
