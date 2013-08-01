@@ -7,7 +7,7 @@ body {margin: 0; padding: 0;}
 header {
 	width: 100%;
 	height: 200px; 
-	background-image:url('taxiheader.gif');	
+	background-color: #fff;	
 }
 header a.logo {
 	display: block;
