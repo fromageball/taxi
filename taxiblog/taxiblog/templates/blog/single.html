@@ -1,0 +1,71 @@
+    {% extends 'base.html' %}
+    {% load comments %}
+    {% load disqus_tags %}
+    {% disqus_dev %}
+    {% set_disqus_developer 1 %}
+    {% load thumbnail %}
+    
+    {% block title %} Who, Me? Taxi? {% endblock %}
+     
+    {% block content %}
+	<article class="part1">
+			{% for post in posts %}
+			{% set_disqus_identifier post.id %}
+			{% set_disqus_url post.get_absolute_url %}
+    
+			<h1 class="entryheader"><a href="#">{{ post.title }}</a></h1>
+			
+			<p>{{ post.bodytext }}</p>
+			{% for postimage in post.postkey.all %}
+			
+			{% thumbnail postimage.image "500x500" as im %}
+			 <img src="{{ im.url }}" alt="dlskjf">
+			 {% endthumbnail %}
+			
+			
+			 
+			{% endfor %}
+			<h2>Posted on {{ post.timestamp }}</h2>
+			<footer class="postToSocialMediaLinks">
+			<a href="#" 
+  onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+      'facebook-share-dialog', 
+      'width=626,height=436'); 
+    return false;"><img src="{{STATIC_URL}}/facebook.gif" alt="fbshare" ></a>
+		
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="whometaxi">Tweet</a>
+		
+		</footer>
+		<br />
+		   
+		    
+    
+    
+    
+
+    
+    
+		    {% set_disqus_title post.title %}
+			{% set_disqus_developer 1 %}
+		    {% disqus_show_comments post.id %}
+    
+    
+		
+		
+		
+
+		
+			{% endfor%}
+			
+		
+			
+		</article>
+		
+	
+		
+    {% endblock %}
+
+
+
