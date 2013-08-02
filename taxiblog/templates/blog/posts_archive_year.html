@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+
+  
+  
+  
+  
+      {% block title %} Who, Me? Taxi? {% endblock %}
+     
+    {% block content %}
+	<article class="part1">
+	 <h1>{{ year|date:"Y" }}</h1>
+	 
+	 <p>{{ date|date:"F, Y" }}</p>
+    		{% for obj in object_list %}
+    		
+    	
+    	
+        <p>
+            <a href="{% url 'single' obj.slug %}"> {{ obj.title }} - {{ obj.timestamp|date:"F j, Y" }}</a>
+        </p>
+        
+    		{% endfor %}
+    
+    
+    
+    {% for date in date_list %}
+    {% endfor %}
+   
+			
+		    
+    
+		
+	
+
+		
+		
+		
+			
+		</article>
+		
+	
+		
+    {% endblock %}
