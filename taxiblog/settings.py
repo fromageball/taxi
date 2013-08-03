@@ -176,4 +176,4 @@ LOGGING = {
 }
 from settings_secret import *
 from os.path import expanduser
-execfile(expanduser('/home/fromageball2/git/whometaxi.git/whometaxi/taxiblog/settings_secret.py'))
+execfile(expanduser('/home/fromageball2/git/taxi.git/taxi/taxiblog/settings_secret.py'))
