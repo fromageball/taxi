@@ -3,3 +3,4 @@
 settings.py
 
 *.json
+taxiblog/settings_secret.py
