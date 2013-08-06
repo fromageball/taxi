@@ -31,7 +31,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.whometaxi.com']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -73,7 +73,7 @@ STATIC_ROOT = '/home/fromageball2/whometaxi.com/public/static/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = 'http://www.whometaxi.com/static/'
+STATIC_URL = 'http://whometaxi.com/public/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -176,4 +176,4 @@ LOGGING = {
 }
 from settings_secret import *
 from os.path import expanduser
-execfile(expanduser('/home/fromageball2/git/taxi.git/taxi/taxiblog/settings_secret.py'))
+execfile(expanduser('/home/fromageball2/whometaxi.com/taxi/taxiblog/settings_secret.py'))
